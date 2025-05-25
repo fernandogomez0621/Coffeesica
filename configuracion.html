@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración - Coffeesica Data Solutions</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="leaf-icon">🌱</span>
+                <h1>COFFEESICA DATA SOLUTIONS</h1>
+            </div>
+            <p class="subtitle">Configuración del Sistema y Cultivos</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav-bar">
+            <button class="nav-btn" onclick="location.href='index.html'">🔐 Acceso</button>
+            <button class="nav-btn" onclick="location.href='dashboard.html'">📊 Dashboard</button>
+            <button class="nav-btn" onclick="location.href='modelos-ia.html'">🤖 Modelos IA</button>
+            <button class="nav-btn" onclick="location.href='predicciones.html'">📈 Predicciones</button>
+            <button class="nav-btn" onclick="location.href='capacitacion.html'">🎓 Capacitación</button>
+            <button class="nav-btn active">⚙️ Configuración</button>
+        </nav>
+
+        <!-- Perfil del Usuario -->
+        <div class="config-section">
+            <h3>👤 Perfil del Usuario</h3>
+            <div class="config-grid">
+                <div class="form-group">
+                    <label>Nombre Completo:</label>
+                    <input type="text" value="Juan Carlos Méndez">
+                </div>
+                <div class="form-group">
+                    <label>Correo Electrónico:</label>
+                    <input type="email" value="jcarlos@coffeesica.com">
+                </div>
+                <div class="form-group">
+                    <label>Teléfono:</label>
+                    <input type="tel" value="+57 300 123 4567">
+                </div>
+                <div class="form-group">
+                    <label>Tipo de Usuario:</label>
+                    <select>
+                        <option>Caficultor Individual</option>
+                        <option>Cooperativa</option>
+                        <option>Empresa Consultora</option>
+                        <option>Administrador</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Ubicación (Municipio):</label>
+                    <input type="text" value="Pitalito, Huila">
+                </div>
+                <div class="form-group">
+                    <label>Años de Experiencia:</label>
+                    <input type="number" value="15" min="0" max="50">
+                </div>
+            </div>
+        </div>
+
+        <!-- Configuración de Finca -->
+        <div class="config-section">
+            <h3>🏡 Configuración de Finca</h3>
+            <div class="config-grid">
+                <div class="form-group">
+                    <label>Nombre de la Finca:</label>
+                    <input type="text" value="Finca El Paraíso">
+                </div>
+                <div class="form-group">
+                    <label>Área Total (hectáreas):</label>
+                    <input type="number" value="12.5" step="0.1" min="0">
+                </div>
+                <div class="form-group">
+                    <label>Área Sembrada (hectáreas):</label>
+                    <input type="number" value="10.0" step="0.1" min="0">
+                </div>
+                <div class="form-group">
+                    <label>Altitud (msnm):</label>
+                    <input type="number" value="1650" min="800" max="2200">
+                </div>
+                <div class="form-group">
+                    <label>Coordenadas GPS (Latitud):</label>
+                    <input type="number" value="1.8570" step="0.0001">
+                </div>
+                <div class="form-group">
+                    <label>Coordenadas GPS (Longitud):</label>
+                    <input type="number" value="-76.0470" step="0.0001">
+                </div>
+                <div class="form-group">
+                    <label>Pendiente del Terreno:</label>
+                    <select>
+                        <option>Plano (0-5%)</option>
+                        <option selected>Ondulado (5-15%)</option>
+                        <option>Inclinado (15-30%)</option>
+                        <option>Empinado (>30%)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Tipo de Suelo:</label>
+                    <select>
+                        <option selected>Andisol</option>
+                        <option>Oxisol</option>
+                        <option>Ultisol</option>
+                        <option>Entisol</option>
+                        <option>Inceptisol</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Configuración de Cultivo -->
+        <div class="config-section">
+            <h3>☕ Configuración de Cultivo</h3>
+            <div class="config-grid">
+                <div class="form-group">
+                    <label>Variedad de Café Principal:</label>
+                    <select>
+                        <option selected>Caturra</option>
+                        <option>Colombia</option>
+                        <option>Castillo</option>
+                        <option>Típica</option>
+                        <option>Borbón</option>
+                        <option>Geisha</option>
+                        <option>Tabi</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Variedades Secundarias:</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="colombia" checked>
+                            <label for="colombia">Colombia</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="castillo">
+                            <label for="castillo">Castillo</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="bourbon">
+                            <label for="bourbon">Borbón</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="geisha">
+                            <label for="geisha">Geisha</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Edad del Cultivo (años):</label>
+                    <input type="number" value="8" min="1" max="25">
+                </div>
+                <div class="form-group">
+                    <label>Densidad de Siembra (plantas/ha):</label>
+                    <input type="number" value="5500" min="3000" max="8000">
+                </div>
+                <div class="form-group">
+                    <label>Sistema de Cultivo:</label>
+                    <select>
+                        <option selected>Pleno Sol</option>
+                        <option>Semisombra</option>
+                        <option>Sombra Diversificada</option>
+                        <option>Agroforestal</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Especies de Sombra:</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="guamo" checked>
+                            <label for="guamo">Guamo</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="nogal">
+                            <label for="nogal">Nogal Cafetero</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="cedro">
+                            <label for="cedro">Cedro</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="platano">
+                            <label for="platano">Plátano</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Parámetros Climáticos -->
+        <div class="config-section">
+            <h3>🌡️ Parámetros Climáticos Deseados</h3>
+            <div class="config-grid">
+                <div class="form-group">
+                    <label>Temperatura Óptima (°C):</label>
+                    <div class="range-group">
+                        <div>
+                            <label>Mínima:</label>
+                            <input type="number" value="18" min="15" max="25" step="0.5">
+                        </div>
+                        <div>
+                            <label>Máxima:</label>
+                            <input type="number" value="24" min="20" max="30" step="0.5">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Precipitación Anual Deseada (mm):</label>
+                    <div class="range-group">
+                        <div>
+                            <label>Mínima:</label>
+                            <input type="number" value="1200" min="800" max="1500">
+                        </div>
+                        <div>
+                            <label>Máxima:</label>
+                            <input type="number" value="1800" min="1500" max="2500">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Humedad Relativa Óptima (%):</label>
+                    <div class="range-group">
+                        <div>
+                            <label>Mínima:</label>
+                            <input type="number" value="65" min="50" max="80">
+                        </div>
+                        <div>
+                            <label>Máxima:</label>
+                            <input type="number" value="85" min="70" max="95">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Horas de Sol Diarias:</label>
+                    <input type="number" value="4.5" min="3" max="8" step="0.5">
+                </div>
+                <div class="form-group">
+                    <label>Velocidad del Viento (km/h):</label>
+                    <input type="number" value="15" min="5" max="30">
+                </div>
+                <div class="form-group">
+                    <label>Radiación Solar (MJ/m²/día):</label>
+                    <input type="number" value="18" min="12" max="25" step="0.1">
+                </div>
+            </div>
+        </div>
+
+        <!-- Manejo Fitosanitario -->
+        <div class="config-section">
+            <h3>🐛 Manejo Fitosanitario</h3>
+            <div class="config-grid">
+                <div class="form-group">
+                    <label>Plagas Principales a Monitorear:</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="broca" checked>
+                            <label for="broca">Broca del Café</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="minador" checked>
+                            <label for="minador">Minador de las Hojas</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="cochinilla">
+                            <label for="cochinilla">Cochinilla</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="chamusquina">
+                            <label for="chamusquina">Chamusquina</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Enfermedades a Monitorear:</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="roya" checked>
+                            <label for="roya">Roya del Cafeto</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="antracnosis">
+                            <label for="antracnosis">Antracnosis</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="cercospora">
+                            <label for="cercospora">Cercospora</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="phoma">
+                            <label for="phoma">Phoma</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Frecuencia de Monitoreo:</label>
+                    <select>
+                        <option>Semanal</option>
+                        <option selected>Quincenal</option>
+                        <option>Mensual</option>
+                        <option>Cada 2 meses</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Método de Control Preferido:</label>
+                    <select>
+                        <option>Químico</option>
+                        <option selected>Biológico</option>
+                        <option>Integrado</option>
+                        <option>Orgánico</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fertilización -->
+        <div class="config-section">
+            <h3>🌱 Plan de Fertilización</h3>
+            <div class="config-grid">
+                <div class="form-group">
+                    <label>Análisis de Suelo más Reciente:</label>
+                    <input type="date" value="2024-08-15">
+                </div>
+                <div class="form-group">
+                    <label>pH del Suelo:</label>
+                    <input type="number" value="5.8" min="4.0" max="8.0" step="0.1">
+                </div>
+                <div class="form-group">
+                    <label>Materia Orgánica (%):</label>
+                    <input type="number" value="3.2" min="0" max="10" step="0.1">
+                </div>
+                <div class="form-group">
+                    <label>Nitrógeno (ppm):</label>
+                    <input type="number" value="45" min="0" max="200">
+                </div>
+                <div class="form-group">
+                    <label>Fósforo (ppm):</label>
+                    <input type="number" value="25" min="0" max="100">
+                </div>
+                <div class="form-group">
+                    <label>Potasio (ppm):</label>
+                    <input type="number" value="180" min="0" max="500">
+                </div>
+                <div class="form-group">
+                    <label>Tipo de Fertilizante Preferido:</label>
+                    <select>
+                        <option>Químico</option>
+                        <option selected>Orgánico</option>
+                        <option>Mixto</option>
+                        <option>Compost</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Frecuencia de Fertilización:</label>
+                    <select>
+                        <option>Mensual</option>
+                        <option>Bimensual</option>
+                        <option selected>Trimestral</option>
+                        <option>Semestral</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cosecha y Postcosecha -->
+        <div class="config-section">
+            <h3>📅 Cosecha y Postcosecha</h3>
+            <div class="config-grid">
+                <div class="form-group">
+                    <label>Época de Cosecha Principal:</label>
+                    <select>
+                        <option>Marzo - Mayo</option>
+                        <option selected>Abril - Junio</option>
+                        <option>Mayo - Julio</option>
+                        <option>Octubre - Diciembre</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Época de Mitaca:</label>
+                    <select>
+                        <option selected>Octubre - Diciembre</option>
+                        <option>Noviembre - Enero</option>
+                        <option>Diciembre - Febrero</option>
+                        <option>No aplica</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Método de Cosecha:</label>
+                    <select>
+                        <option selected>Manual Selectiva</option>
+                        <option>Manual en Masa</option>
+                        <option>Mecánica</option>
+                        <option>Mixta</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Proceso de Beneficio:</label>
+                    <select>
+                        <option selected>Húmedo</option>
+                        <option>Seco (Natural)</option>
+                        <option>Semi-húmedo (Honey)</option>
+                        <option>Fermentado</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Tiempo de Fermentación (horas):</label>
+                    <input type="number" value="18" min="12" max="36">
+                </div>
+                <div class="form-group">
+                    <label>Método de Secado:</label>
+                    <select>
+                        <option>Sol (Patios)</option>
+                        <option>Marquesinas</option>
+                        <option selected>Secador Mecánico</option>
+                        <option>Mixto</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Humedad Final Deseada (%):</label>
+                    <input type="number" value="12" min="10" max="14" step="0.5">
+                </div>
+                <div class="form-group">
+                    <label>Capacidad de Almacenamiento (sacos):</label>
+                    <input type="number" value="200" min="50" max="1000">
+                </div>
+            </div>
+        </div>
+
+        <!-- Producción y Rendimiento -->
+        <div class="config-section">
+            <h3>📊 Metas de Producción</h3>
+            <div class="config-grid">
+                <div class="form-group">
+                    <label>Producción Actual (arrobas/ha/año):</label>
+                    <input type="number" value="95" min="30" max="200">
+                </div>
+                <div class="form-group">
+                    <label>Meta de Producción (arrobas/ha/año):</label>
+                    <input type="number" value="120" min="50" max="250">
+                </div>
+                <div class="form-group">
+                    <label>Calidad Objetivo (puntaje SCA):</label>
+                    <input type="number" value="84" min="80" max="95">
+                </div>
+                <div class="form-group">
+                    <label>Precio Objetivo ($/arroba):</label>
+                    <input type="number" value="420000" min="300000" max="800000">
+                </div>
+                <div class="form-group">
+                    <label>Certificaciones Actuales:</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="organico">
+                            <label for="organico">Orgánico</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="fairtrade" checked>
+                            <label for="fairtrade">Fair Trade</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="rainforest">
+                            <label for="rainforest">Rainforest Alliance</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="utz">
+                            <label for="utz">UTZ</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Configuración de Notificaciones -->
+        <div class="config-section">
+            <h3>🔔 Configuración de Notificaciones</h3>
+            <div class="config-grid">
+                <div class="form-group">
+                    <label>Alertas Climáticas:</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="lluvia" checked>
+                            <label for="lluvia">Predicción de Lluvia</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="sequia" checked>
+                            <label for="sequia">Alerta de Sequía</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="temperatura" checked>
+                            <label for="temperatura">Cambios de Temperatura</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="vientos">
+                            <label for="vientos">Vientos Fuertes</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Alertas Fitosanitarias:</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="alert-broca" checked>
+                            <label for="alert-broca">Riesgo de Broca</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="alert-roya" checked>
+                            <label for="alert-roya">Riesgo de Roya</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="alert-plagas">
+                            <label for="alert-plagas">Otras Plagas</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Recordatorios:</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="fertilizacion" checked>
+                            <label for="fertilizacion">Fertilización</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="podas" checked>
+                            <label for="podas">Podas</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="aplicaciones">
+                            <label for="aplicaciones">Aplicaciones</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="cosecha" checked>
+                            <label for="cosecha">Época de Cosecha</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Frecuencia de Reportes:</label>
+                    <select>
+                        <option>Diario</option>
+                        <option selected>Semanal</option>
+                        <option>Quincenal</option>
+                        <option>Mensual</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Configuración Técnica -->
+        <div class="config-section">
+            <h3>⚙️ Configuración Técnica</h3>
+            <div class="config-grid">
+                <div class="form-group">
+                    <label>Modelo de IA Preferido:</label>
+                    <select>
+                        <option selected>GPT-4 Turbo</option>
+                        <option>Claude 3</option>
+                        <option>Gemini Pro</option>
+                        <option>LLaMA 2</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Precisión de Predicciones:</label>
+                    <select>
+                        <option>Básica (85%)</option>
+                        <option selected>Estándar (90%)</option>
+                        <option>Avanzada (95%)</option>
+                        <option>Premium (98%)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Intervalo de Actualización de Datos:</label>
+                    <select>
+                        <option>Cada hora</option>
+                        <option>Cada 6 horas</option>
+                        <option selected>Diario</option>
+                        <option>Semanal</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Almacenamiento de Datos (meses):</label>
+                    <input type="number" value="24" min="6" max="60">
+                </div>
+                <div class="form-group">
+                    <label>Backup Automático:</label>
+                    <select>
+                        <option selected>Diario</option>
+                        <option>Semanal</option>
+                        <option>Mensual</option>
+                        <option>Desactivado</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Formato de Exportación:</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="excel" checked>
+                            <label for="excel">Excel (.xlsx)</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="csv" checked>
+                            <label for="csv">CSV</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="pdf">
+                            <label for="pdf">PDF</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="json">
+                            <label for="json">JSON</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Observaciones -->
+        <div class="config-section">
+            <h3>📝 Observaciones Adicionales</h3>
+            <div class="form-group">
+                <label>Comentarios y Observaciones Especiales:</label>
+                <textarea placeholder="Ingrese observaciones especiales sobre su cultivo, condiciones particulares, objetivos específicos, o cualquier información adicional que considere relevante para mejorar las predicciones y recomendaciones del sistema...">La finca cuenta con un sistema de riego por goteo instalado en el 60% del área cultivada. Se realizan podas de renovación cada 8 años y se mantiene un registro detallado de aplicaciones fitosanitarias. El cultivo está ubicado en una zona con microclima favorable y se ha observado una tendencia al aumento de temperaturas en los últimos 3 años.</textarea>
+            </div>
+        </div>
+
+        <!-- Botones de Acción -->
+        <div class="btn-group">
+            <button class="btn btn-primary" onclick="guardarConfiguracion()">💾 Guardar Configuración</button>
+            <button class="btn btn-secondary" onclick="exportarConfiguracion()">📤 Exportar Configuración</button>
+            <button class="btn btn-secondary" onclick="importarConfiguracion()">📥 Importar Configuración</button>
+            <button class="btn btn-danger" onclick="resetearConfiguracion()">🔄 Resetear a Valores por Defecto</button>
+        </div>
+    </div>
+
+    <script>
+        function guardarConfiguracion() {
+            alert('Configuración guardada exitosamente');
+        }
+
+        function exportarConfiguracion() {
+            alert('Configuración exportada a archivo');
+        }
+
+        function importarConfiguracion() {
+            alert('Seleccione archivo de configuración para importar');
+        }
+
+        function resetearConfiguracion() {
+            if (confirm('¿Está seguro de que desea resetear toda la configuración?')) {
+                alert('Configuración reseteada a valores por defecto');
+                location.reload();
+            }
+        }
+    </script>
+</body>
+</html>

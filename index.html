@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffeesica Data Solutions</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="leaf-icon">🌱</span>
+                <h1>COFFEESICA DATA SOLUTIONS</h1>
+            </div>
+            <p class="subtitle">Plataforma Integral para la Optimización del Cultivo de Café en el Huila</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav-bar">
+            <button class="nav-btn active" onclick="showLogin()">🔐 Acceso</button>
+            <button class="nav-btn" onclick="location.href='dashboard.html'">📊 Dashboard</button>
+            <button class="nav-btn" onclick="location.href='modelos-ia.html'">🤖 Modelos IA</button>
+            <button class="nav-btn" onclick="location.href='predicciones.html'">📈 Predicciones</button>
+            <button class="nav-btn" onclick="location.href='capacitacion.html'">🎓 Capacitación</button>
+            <button class="nav-btn" onclick="location.href='configuracion.html'">⚙️ Configuración</button>
+        </nav>
+
+        <!-- Login Form -->
+        <div class="login-container" id="loginForm">
+            <div class="login-card">
+                <h2>👤 Iniciar Sesión</h2>
+                
+                <form class="login-form">
+                    <div class="form-group">
+                        <label>Correo Electrónico:</label>
+                        <input type="email" placeholder="usuario@coffeesica.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Contraseña:</label>
+                        <input type="password" placeholder="••••••••" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Tipo de Usuario:</label>
+                        <select>
+                            <option>Productor Individual</option>
+                            <option>Cooperativa</option>
+                            <option>Empresa</option>
+                            <option>Consultor</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">🔐 Iniciar Sesión</button>
+                    <button type="button" class="btn-secondary">👥 Registrarse</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showLogin() {
+            alert("Funcionalidad de login en desarrollo");
+        }
+    </script>
+</body>
+</html>

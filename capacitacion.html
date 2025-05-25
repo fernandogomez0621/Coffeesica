@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacitación - Coffeesica Data Solutions</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="leaf-icon">🌱</span>
+                <h1>COFFEESICA DATA SOLUTIONS</h1>
+            </div>
+            <p class="subtitle">Centro de Capacitación y Formación</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav-bar">
+            <button class="nav-btn" onclick="location.href='index.html'">🔐 Acceso</button>
+            <button class="nav-btn" onclick="location.href='dashboard.html'">📊 Dashboard</button>
+            <button class="nav-btn" onclick="location.href='modelos-ia.html'">🤖 Modelos IA</button>
+            <button class="nav-btn" onclick="location.href='predicciones.html'">📈 Predicciones</button>
+            <button class="nav-btn active">🎓 Capacitación</button>
+            <button class="nav-btn" onclick="location.href='configuracion.html'">⚙️ Configuración</button>
+        </nav>
+
+        <!-- Training Programs -->
+        <div class="course-grid">
+            <!-- Curso Básico -->
+            <div class="course-card">
+                <h3>🌱 Fundamentos de Caficultura Digital</h3>
+                <p><strong>Duración:</strong> 2 semanas</p>
+                <p><strong>Modalidad:</strong> Virtual</p>
+                <p><strong>Nivel:</strong> Principiante</p>
+                <div class="course-progress">
+                    <div class="progress-bar" style="width: 75%;"></div>
+                </div>
+                <p><small>Progreso: 75% completado</small></p>
+                <div style="margin: 15px 0;">
+                    <strong>Temas:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Introducción a la agricultura de precisión</li>
+                        <li>Uso de sensores en el cultivo</li>
+                        <li>Interpretación de datos climáticos</li>
+                        <li>Plataformas digitales básicas</li>
+                    </ul>
+                </div>
+                <button class="btn-primary" onclick="continuarCurso('basico')">📚 Continuar Curso</button>
+            </div>
+
+            <!-- Curso Intermedio -->
+            <div class="course-card">
+                <h3>🔬 Análisis de Datos Agrícolas</h3>
+                <p><strong>Duración:</strong> 3 semanas</p>
+                <p><strong>Modalidad:</strong> Híbrida</p>
+                <p><strong>Nivel:</strong> Intermedio</p>
+                <div class="course-progress">
+                    <div class="progress-bar" style="width: 30%;"></div>
+                </div>
+                <p><small>Progreso: 30% completado</small></p>
+                <div style="margin: 15px 0;">
+                    <strong>Temas:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Interpretación de análisis de suelo</li>
+                        <li>Modelado predictivo básico</li>
+                        <li>Sistemas de información geográfica</li>
+                        <li>Optimización de recursos</li>
+                    </ul>
+                </div>
+                <button class="btn-primary" onclick="continuarCurso('intermedio')">📊 Continuar Curso</button>
+            </div>
+
+            <!-- Curso Avanzado -->
+            <div class="course-card">
+                <h3>🤖 Inteligencia Artificial en Agricultura</h3>
+                <p><strong>Duración:</strong> 4 semanas</p>
+                <p><strong>Modalidad:</strong> Virtual</p>
+                <p><strong>Nivel:</strong> Avanzado</p>
+                <div class="course-progress">
+                    <div class="progress-bar" style="width: 0%;"></div>
+                </div>
+                <p><small>Próximamente disponible</small></p>
+                <div style="margin: 15px 0;">
+                    <strong>Temas:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Machine Learning aplicado</li>
+                        <li>Visión computacional para cultivos</li>
+                        <li>IoT en agricultura</li>
+                        <li>Automatización de procesos</li>
+                    </ul>
+                </div>
+                <button class="btn-secondary" onclick="alert('Curso disponible el 1 de Junio')">⏳ Próximamente</button>
+            </div>
+
+            <!-- Manejo de Plagas -->
+            <div class="course-card">
+                <h3>🐛 Manejo Integrado de Plagas</h3>
+                <p><strong>Duración:</strong> 2 semanas</p>
+                <p><strong>Modalidad:</strong> Presencial</p>
+                <p><strong>Nivel:</strong> Intermedio</p>
+                <div class="course-progress">
+                    <div class="progress-bar" style="width: 100%;"></div>
+                </div>
+                <p><small>✅ Completado</small></p>
+                <div style="margin: 15px 0;">
+                    <strong>Temas:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Identificación de plagas comunes</li>
+                        <li>Control biológico</li>
+                        <li>Uso responsable de pesticidas</li>
+                        <li>Monitoreo y prevención</li>
+                    </ul>
+                </div>
+                <button class="btn-primary" onclick="descargarCertificado('plagas')">🏆 Descargar Certificado</button>
+            </div>
+
+            <!-- Calidad del Café -->
+            <div class="course-card">
+                <h3>☕ Calidad y Catación de Café</h3>
+                <p><strong>Duración:</strong> 3 semanas</p>
+                <p><strong>Modalidad:</strong> Presencial</p>
+                <p><strong>Nivel:</strong> Especialización</p>
+                <div class="course-progress">
+                    <div class="progress-bar" style="width: 60%;"></div>
+                </div>
+                <p><small>Progreso: 60% completado</small></p>
+                <div style="margin: 15px 0;">
+                    <strong>Temas:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Protocolos SCA de catación</li>
+                        <li>Defectos del café</li>
+                        <li>Procesos de beneficio</li>
+                        <li>Trazabilidad y certificaciones</li>
+                    </ul>
+                </div>
+                <button class="btn-primary" onclick="continuarCurso('calidad')">☕ Continuar Curso</button>
+            </div>
+
+            <!-- Uso de la Plataforma -->
+            <div class="course-card">
+                <h3>💻 Uso de Coffeesica Platform</h3>
+                <p><strong>Duración:</strong> 1 semana</p>
+                <p><strong>Modalidad:</strong> Virtual</p>
+                <p><strong>Nivel:</strong> Básico</p>
+                <div class="course-progress">
+                    <div class="progress-bar" style="width: 85%;"></div>
+                </div>
+                <p><small>Progreso: 85% completado</small></p>
+                <div style="margin: 15px 0;">
+                    <strong>Temas:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Navegación de la plataforma</li>
+                        <li>Configuración de cultivos</li>
+                        <li>Interpretación de predicciones</li>
+                        <li>Generación de reportes</li>
+                    </ul>
+                </div>
+                <button class="btn-primary" onclick="continuarCurso('plataforma')">💻 Continuar Curso</button>
+            </div>
+        </div>
+
+        <!-- Workshops Section -->
+        <div class="dashboard-card" style="margin-top: 30px;">
+            <h3>🎪 Talleres y Eventos</h3>
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <h4>📅 Próximos Talleres</h4>
+                    <div class="metric">
+                        <span>Taller de IA Aplicada:</span>
+                        <span class="metric-value">15 Jun 2025</span>
+                    </div>
+                    <div class="metric">
+                        <span>Agricultura de Precisión:</span>
+                        <span class="metric-value">22 Jun 2025</span>
+                    </div>
+                    <div class="metric">
+                        <span>Análisis de Suelos:</span>
+                        <span class="metric-value">30 Jun 2025</span>
+                    </div>
+                    <button class="btn-primary" onclick="inscribirTaller()">📝 Inscribirse</button>
+                </div>
+
+                <div class="dashboard-card">
+                    <h4>📊 Mi Progreso</h4>
+                    <div class="metric">
+                        <span>Cursos Completados:</span>
+                        <span class="metric-value">3/6</span>
+                    </div>
+                    <div class="metric">
+                        <span>Certificados Obtenidos:</span>
+                        <span class="metric-value">2</span>
+                    </div>
+                    <div class="metric">
+                        <span>Horas de Capacitación:</span>
+                        <span class="metric-value">45 hrs</span>
+                    </div>
+                    <button class="btn-primary" onclick="verProgreso()">📈 Ver Detalle</button>
+                </div>
+
+                <div class="dashboard-card">
+                    <h4>🎯 Recursos Adicionales</h4>
+                    <div style="margin: 10px 0;">
+                        <a href="#" onclick="alert('Descargando...')">📖 Manual de Usuario</a>
+                    </div>
+                    <div style="margin: 10px 0;">
+                        <a href="#" onclick="alert('Accediendo...')">🎥 Videotutoriales</a>
+                    </div>
+                    <div style="margin: 10px 0;">
+                        <a href="#" onclick="alert('Abriendo foro...')">💬 Foro de Consultas</a>
+                    </div>
+                    <div style="margin: 10px 0;">
+                        <a href="#" onclick="alert('Contactando soporte...')">🆘 Soporte Técnico</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function continuarCurso(curso) {
+            alert(`Continuando curso: ${curso}. Funcionalidad en desarrollo.`);
+        }
+
+        function descargarCertificado(curso) {
+            alert(`Descargando certificado del curso: ${curso}`);
+        }
+
+        function inscribirTaller() {
+            alert('Abriendo formulario de inscripción...');
+        }
+
+        function verProgreso() {
+            alert('Mostrando progreso detallado...');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Coffeesica Data Solutions</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="leaf-icon">🌱</span>
+                <h1>COFFEESICA DATA SOLUTIONS</h1>
+            </div>
+            <p class="subtitle">Dashboard de Control - Cultivo de Café</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav-bar">
+            <button class="nav-btn" onclick="location.href='index.html'">🔐 Acceso</button>
+            <button class="nav-btn active">📊 Dashboard</button>
+            <button class="nav-btn" onclick="location.href='modelos-ia.html'">🤖 Modelos IA</button>
+            <button class="nav-btn" onclick="location.href='predicciones.html'">📈 Predicciones</button>
+            <button class="nav-btn" onclick="location.href='capacitacion.html'">🎓 Capacitación</button>
+            <button class="nav-btn" onclick="location.href='configuracion.html'">⚙️ Configuración</button>
+        </nav>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-grid">
+            <!-- Condiciones Climáticas -->
+            <div class="dashboard-card">
+                <h3>🌤️ Condiciones Climáticas Actuales</h3>
+                <div class="metric">
+                    <span>Temperatura:</span>
+                    <span class="metric-value">22°C</span>
+                </div>
+                <div class="metric">
+                    <span>Humedad:</span>
+                    <span class="metric-value">75%</span>
+                </div>
+                <div class="metric">
+                    <span>Precipitación:</span>
+                    <span class="metric-value">12mm</span>
+                </div>
+                <div class="metric">
+                    <span>Radiación Solar:</span>
+                    <span class="metric-value">85%</span>
+                </div>
+            </div>
+
+            <!-- Estado del Cultivo -->
+            <div class="dashboard-card">
+                <h3>☕ Estado del Cultivo</h3>
+                <div class="metric">
+                    <span>Área Total:</span>
+                    <span class="metric-value">15 ha</span>
+                </div>
+                <div class="metric">
+                    <span>Plantas Activas:</span>
+                    <span class="metric-value">12,500</span>
+                </div>
+                <div class="metric">
+                    <span>Etapa de Crecimiento:</span>
+                    <span class="metric-value">Floración</span>
+                </div>
+                <div class="metric">
+                    <span>Salud General:</span>
+                    <span class="metric-value" style="color: #28a745;">Buena</span>
+                </div>
+            </div>
+
+            <!-- Alertas de Plagas -->
+            <div class="dashboard-card">
+                <h3>🐛 Alertas de Plagas</h3>
+                <div class="metric">
+                    <span>Riesgo Minador:</span>
+                    <span class="metric-value" style="color: #ffc107;">Medio</span>
+                </div>
+                <div class="metric">
+                    <span>Riesgo Roya:</span>
+                    <span class="metric-value" style="color: #28a745;">Bajo</span>
+                </div>
+                <div class="metric">
+                    <span>Última Inspección:</span>
+                    <span class="metric-value">2 días</span>
+                </div>
+                <div class="metric">
+                    <span>Próxima Fumigación:</span>
+                    <span class="metric-value">5 días</span>
+                </div>
+            </div>
+
+            <!-- Producción Estimada -->
+            <div class="dashboard-card">
+                <h3>📈 Producción Estimada</h3>
+                <div class="metric">
+                    <span>Esta Cosecha:</span>
+                    <span class="metric-value">2,800 kg</span>
+                </div>
+                <div class="metric">
+                    <span>Rendimiento/ha:</span>
+                    <span class="metric-value">187 kg/ha</span>
+                </div>
+                <div class="metric">
+                    <span>Calidad Esperada:</span>
+                    <span class="metric-value">Premium</span>
+                </div>
+                <div class="metric">
+                    <span>Días para Cosecha:</span>
+                    <span class="metric-value">45 días</span>
+                </div>
+            </div>
+
+            <!-- Recomendaciones -->
+            <div class="dashboard-card">
+                <h3>💡 Recomendaciones del Sistema</h3>
+                <div style="background: #fff3cd; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                    <strong>🌧️ Irrigación:</strong> Aumentar riego en 15% próximos 3 días
+                </div>
+                <div style="background: #d4edda; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                    <strong>🧪 Fertilización:</strong> Aplicar NPK 18-5-15 en 7 días
+                </div>
+                <div style="background: #f8d7da; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                    <strong>🐛 Plagas:</strong> Monitorear sector norte por riesgo de minador
+                </div>
+            </div>
+
+            <!-- Actividades Recientes -->
+            <div class="dashboard-card">
+                <h3>📝 Actividades Recientes</h3>
+                <div class="metric">
+                    <span>Última Siembra:</span>
+                    <span class="metric-value">15 Feb 2025</span>
+                </div>
+                <div class="metric">
+                    <span>Último Riego:</span>
+                    <span class="metric-value">Ayer</span>
+                </div>
+                <div class="metric">
+                    <span>Última Poda:</span>
+                    <span class="metric-value">1 semana</span>
+                </div>
+                <div class="metric">
+                    <span>Próxima Tarea:</span>
+                    <span class="metric-value">Fertilización</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simulación de actualización de datos en tiempo real
+        setInterval(() => {
+            console.log("Actualizando datos del dashboard...");
+        }, 30000);
+    </script>
+</body>
+</html>

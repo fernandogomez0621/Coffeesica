@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos IA - Coffeesica Data Solutions</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="leaf-icon">🌱</span>
+                <h1>COFFEESICA DATA SOLUTIONS</h1>
+            </div>
+            <p class="subtitle">Modelos de Inteligencia Artificial</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav-bar">
+            <button class="nav-btn" onclick="location.href='index.html'">🔐 Acceso</button>
+            <button class="nav-btn" onclick="location.href='dashboard.html'">📊 Dashboard</button>
+            <button class="nav-btn active">🤖 Modelos IA</button>
+            <button class="nav-btn" onclick="location.href='predicciones.html'">📈 Predicciones</button>
+            <button class="nav-btn" onclick="location.href='capacitacion.html'">🎓 Capacitación</button>
+            <button class="nav-btn" onclick="location.href='configuracion.html'">⚙️ Configuración</button>
+        </nav>
+
+        <!-- Models Overview -->
+        <div class="dashboard-card" style="margin-bottom: 30px;">
+            <h3>🧠 Selección de Modelos LLM</h3>
+            <div class="config-grid">
+                <div class="form-group">
+                    <label>Modelo Principal:</label>
+                    <select>
+                        <option>GPT-4 Turbo</option>
+                        <option>Claude-3 Sonnet</option>
+                        <option>Gemini Pro</option>
+                        <option>Llama-2 70B</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Modelo de Respaldo:</label>
+                    <select>
+                        <option>GPT-3.5 Turbo</option>
+                        <option>Claude-3 Haiku</option>
+                        <option>Gemini Flash</option>
+                        <option>Llama-2 13B</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Temperatura:</label>
+                    <input type="range" min="0" max="1" step="0.1" value="0.7">
+                    <small>Creatividad: 0.7</small>
+                </div>
+                <div class="form-group">
+                    <label>Max Tokens:</label>
+                    <input type="number" value="2048" min="256" max="4096">
+                </div>
+            </div>
+            <button class="btn-primary" onclick="alert('Configuración guardada')">💾 Guardar Configuración</button>
+        </div>
+
+        <!-- AI Models Grid -->
+        <div class="model-grid">
+            <!-- Predicción de Rendimiento -->
+            <div class="model-card">
+                <span class="model-icon">📊</span>
+                <h3>Predicción de Rendimiento</h3>
+                <p>Estima la producción de café basada en datos climáticos y del cultivo.</p>
+                <div class="model-status status-active">Activo</div>
+                <div style="margin-top: 15px;">
+                    <div>Precisión: <strong>87%</strong></div>
+                    <div>Última actualización: <strong>Hoy</strong></div>
+                </div>
+                <button class="btn-primary" style="margin-top: 10px;" onclick="alert('Ejecutando modelo...')">🚀 Ejecutar</button>
+            </div>
+
+            <!-- Detección de Plagas -->
+            <div class="model-card">
+                <span class="model-icon">🐛</span>
+                <h3>Detección de Plagas</h3>
+                <p>Identifica y clasifica plagas comunes del café mediante visión computacional.</p>
+                <div class="model-status status-active">Activo</div>
+                <div style="margin-top: 15px;">
+                    <div>Precisión: <strong>92%</strong></div>
+                    <div>Última actualización: <strong>2 días</strong></div>
+                </div>
+                <button class="btn-primary" style="margin-top: 10px;" onclick="alert('Analizando imágenes...')">📷 Analizar</button>
+            </div>
+
+            <!-- Optimización de Riego -->
+            <div class="model-card">
+                <span class="model-icon">💧</span>
+                <h3>Optimización de Riego</h3>
+                <p>Calcula las necesidades hídricas óptimas según condiciones ambientales.</p>
+                <div class="model-status status-training">Entrenando</div>
+                <div style="margin-top: 15px;">
+                    <div>Progreso: <strong>65%</strong></div>
+                    <div>Tiempo restante: <strong>2 días</strong></div>
+                </div>
+                <button class="btn-secondary" style="margin-top: 10px;" disabled>⏳ En Proceso</button>
+            </div>
+
+            <!-- Predicción Climática -->
+            <div class="model-card">
+                <span class="model-icon">🌤️</span>
+                <h3>Predicción Climática</h3>
+                <p>Pronóstico meteorológico específico para zonas cafeteras del Huila.</p>
+                <div class="model-status status-active">Activo</div>
+                <div style="margin-top: 15px;">
+                    <div>Precisión: <strong>78%</strong></div>
+                    <div>Alcance: <strong>7 días</strong></div>
+                </div>
+                <button class="btn-primary" style="margin-top: 10px;" onclick="alert('Generando pronóstico...')">🌦️ Pronóstico</button>
+            </div>
+
+            <!-- Calidad del Grano -->
+            <div class="model-card">
+                <span class="model-icon">☕</span>
+                <h3>Análisis de Calidad</h3>
+                <p>Evalúa la calidad del grano basado en características físicas y organolépticas.</p>
+                <div class="model-status status-active">Activo</div>
+                <div style="margin-top: 15px;">
+                    <div>Precisión: <strong>89%</strong></div>
+                    <div>Muestras analizadas: <strong>1,250</strong></div>
+                </div>
+                <button class="btn-primary" style="margin-top: 10px;" onclick="alert('Analizando calidad...')">🔬 Analizar</button>
+            </div>
+
+            <!-- Recomendación de Fertilizantes -->
+            <div class="model-card">
+                <span class="model-icon">🧪</span>
+                <h3>Recomendación Fertilizantes</h3>
+                <p>Sugiere el programa de fertilización más adecuado para cada lote.</p>
+                <div class="model-status status-inactive">Mantenimiento</div>
+                <div style="margin-top: 15px;">
+                    <div>Estado: <strong>Actualización</strong></div>
+                    <div>Disponible: <strong>Mañana</strong></div>
+                </div>
+                <button class="btn-secondary" style="margin-top: 10px;" disabled>⚙️ Mantenimiento</button>
+            </div>
+
+            <!-- Análisis de Suelo -->
+            <div class="model-card">
+                <span class="model-icon">🌱</span>
+                <h3>Análisis de Suelo</h3>
+                <p>Interpreta análisis de suelo y sugiere correcciones nutricionales.</p>
+                <div class="model-status status-active">Activo</div>
+                <div style="margin-top: 15px;">
+                    <div>Precisión: <strong>85%</strong></div>
+                    <div>Análisis procesados: <strong>340</strong></div>
+                </div>
+                <button class="btn-primary" style="margin-top: 10px;" onclick="alert('Analizando suelo...')">🔍 Analizar</button>
+            </div>
+
+            <!-- Asistente Virtual -->
+            <div class="model-card">
+                <span class="model-icon">🤖</span>
+                <h3>Asistente Virtual</h3>
+                <p>Chatbot especializado en consultas técnicas sobre caficultura.</p>
+                <div class="model-status status-active">Activo</div>
+                <div style="margin-top: 15px;">
+                    <div>Consultas resueltas: <strong>2,847</strong></div>
+                    <div>Satisfacción: <strong>94%</strong></div>
+                </div>
+                <button class="btn-primary" style="margin-top: 10px;" onclick="alert('Iniciando chat...')">💬 Consultar</button>
+            </div>
+        </div>
+
+        <!-- Model Performance Stats -->
+        <div class="dashboard-card" style="margin-top: 30px;">
+            <h3>📈 Estadísticas de Rendimiento</h3>
+            <div class="dashboard-grid">
+                <div class="metric">
+                    <span>Modelos Activos:</span>
+                    <span class="metric-value" style="color: #28a745;">6/8</span>
+                </div>
+                <div class="metric">
+                    <span>Precisión Promedio:</span>
+                    <span class="metric-value">87.2%</span>
+                </div>
+                <div class="metric">
+                    <span>Consultas Hoy:</span>
+                    <span class="metric-value">1,247</span>
+                </div>
+                <div class="metric">
+                    <span>Tiempo Respuesta:</span>
+                    <span class="metric-value">2.3s</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleModel(modelName) {
+            alert(`Alternando estado del modelo: ${modelName}`);
+        }
+    </script>
+</body>
+</html>

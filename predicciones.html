@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicciones - Coffeesica Data Solutions</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="leaf-icon">🌱</span>
+                <h1>COFFEESICA DATA SOLUTIONS</h1>
+            </div>
+            <p class="subtitle">Sistema de Predicciones y Análisis</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav-bar">
+            <button class="nav-btn" onclick="location.href='index.html'">🔐 Acceso</button>
+            <button class="nav-btn" onclick="location.href='dashboard.html'">📊 Dashboard</button>
+            <button class="nav-btn" onclick="location.href='modelos-ia.html'">🤖 Modelos IA</button>
+            <button class="nav-btn active">📈 Predicciones</button>
+            <button class="nav-btn" onclick="location.href='capacitacion.html'">🎓 Capacitación</button>
+            <button class="nav-btn" onclick="location.href='configuracion.html'">⚙️ Configuración</button>
+        </nav>
+
+        <!-- Prediction Tabs -->
+        <div class="prediction-container">
+            <div class="prediction-tabs">
+                <button class="tab-btn active" onclick="showTab('rendimiento')">📊 Rendimiento</button>
+                <button class="tab-btn" onclick="showTab('plagas')">🐛 Plagas</button>
+                <button class="tab-btn" onclick="showTab('clima')">🌤️ Clima</button>
+                <button class="tab-btn" onclick="showTab('calidad')">☕ Calidad</button>
+            </div>
+
+            <!-- Rendimiento Tab -->
+            <div id="rendimiento" class="tab-content">
+                <h3>📊 Predicción de Rendimiento</h3>
+                <div class="prediction-form">
+                    <div class="form-group">
+                        <label>Área del Lote (ha):</label>
+                        <input type="number" value="5" min="0.1" step="0.1">
+                    </div>
+                    <div class="form-group">
+                        <label>Número de Plantas:</label>
+                        <input type="number" value="4000" min="100">
+                    </div>
+                    <div class="form-group">
+                        <label>Variedad de Café:</label>
+                        <select>
+                            <option>Caturra</option>
+                            <option>Colombia</option>
+                            <option>Castillo</option>
+                            <option>Típica</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Edad del Cultivo (años):</label>
+                        <input type="number" value="3" min="1" max="20">
+                    </div>
+                    <div class="form-group">
+                        <label>Altitud (msnm):</label>
+                        <input type="number" value="1500" min="800" max="2200">
+                    </div>
+                    <div class="form-group">
+                        <label>Última Fertilización:</label>
+                        <input type="date" value="2025-04-15">
+                    </div>
+                </div>
+                <button class="btn-primary" onclick="calcularRendimiento()">🔮 Calcular Predicción</button>
+                
+                <div class="result-card" id="resultRendimiento" style="display: none;">
+                    <h4>Resultados de la Predicción:</h4>
+                    <div class="metric">
+                        <span>Producción Esperada:</span>
+                        <span class="metric-value">2,850 kg</span>
+                    </div>
+                    <div class="metric">
+                        <span>Rendimiento por Hectárea:</span>
+                        <span class="metric-value">570 kg/ha</span>
+                    </div>
+                    <div class="metric">
+                        <span>Confianza del Modelo:</span>
+                        <span class="metric-value">89%</span>
+                    </div>
+                    <div class="metric">
+                        <span>Fecha Estimada de Cosecha:</span>
+                        <span class="metric-value">Julio 2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plagas Tab -->
+            <div id="plagas" class="tab-content" style="display: none;">
+                <h3>🐛 Predicción de Plagas</h3>
+                <div class="prediction-form">
+                    <div class="form-group">
+                        <label>Temperatura Promedio (°C):</label>
+                        <input type="number" value="22" min="15" max="35">
+                    </div>
+                    <div class="form-group">
+                        <label>Humedad Relativa (%):</label>
+                        <input type="number" value="75" min="40" max="95">
+                    </div>
+                    <div class="form-group">
+                        <label>Precipitación (mm/mes):</label>
+                        <input type="number" value="150" min="0" max="500">
+                    </div>
+                    <div class="form-group">
+                        <label>Última Fumigación:</label>
+                        <input type="date" value="2025-04-01">
+                    </div>
+                    <div class="form-group">
+                        <label>Tipo de Plaga Observada:</label>
+                        <select>
+                            <option>Ninguna</option>
+                            <option>Minador de la Hoja</option>
+                            <option>Roya del Café</option>
+                            <option>Broca del Café</option>
+                            <option>Cochinilla</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="btn-primary" onclick="analizarPlagas()">🔍 Analizar Riesgo</button>
+                
+                <div class="result-card" id="resultPlagas" style="display: none;">
+                    <h4>Análisis de Riesgo de Plagas:</h4>
+                    <div class="metric">
+                        <span>Riesgo de Minador:</span>
+                        <span class="metric-value" style="color: #ffc107;">Alto (75%)</span>
+                    </div>
+                    <div class="metric">
+                        <span>Riesgo de Roya:</span>
+                        <span class="metric-value" style="color: #28a745;">Bajo (15%)</span>
+                    </div>
+                    <div class="metric">
+                        <span>Recomendación:</span>
+                        <span class="metric-value">Fumigación preventiva en 3 días</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Clima Tab -->
+            <div id="clima" class="tab-content" style="display: none;">
+                <h3>🌤️ Predicción Climática</h3>
+                <div class="prediction-form">
+                    <div class="form-group">
+                        <label>Ubicación:</label>
+                        <select>
+                            <option>Pitalito, Huila</option>
+                            <option>Garzón, Huila</option>
+                            <option>Neiva, Huila</option>
+                            <option>San Agustín, Huila</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Período de Predicción:</label>
+                        <select>
+                            <option>7 días</option>
+                            <option>15 días</option>
+                            <option>30 días</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="btn-primary" onclick="generarPronostico()">🌦️ Generar Pronóstico</button>
+                
+                <div class="result-card" id="resultClima" style="display: none;">
+                    <h4>Pronóstico para los próximos 7 días:</h4>
+                    <div class="metric">
+                        <span>Temperatura Media:</span>
+                        <span class="metric-value">21-25°C</span>
+                    </div>
+                    <div class="metric">
+                        <span>Precipitación Esperada:</span>
+                        <span class="metric-value">45mm</span>
+                    </div>
+                    <div class="metric">
+                        <span>Días de Lluvia:</span>
+                        <span class="metric-value">4 días</span>
+                    </div>
+                    <div class="metric">
+                        <span>Recomendación:</span>
+                        <span class="metric-value">Condiciones favorables para el cultivo</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calidad Tab -->
+            <div id="calidad" class="tab-content" style="display: none;">
+                <h3>☕ Predicción de Calidad</h3>
+                <div class="prediction-form">
+                    <div class="form-group">
+                        <label>Altitud de Cultivo (msnm):</label>
+                        <input type="number" value="1600" min="800" max="2200">
+                    </div>
+                    <div class="form-group">
+                        <label>Proceso de Beneficio:</label>
+                        <select>
+                            <option>Lavado</option>
+                            <option>Natural</option>
+                            <option>Honey</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Tiempo de Fermentación (hrs):</label>
+                        <input type="number" value="18" min="12" max="48">
+                    </div>
+                    <div class="form-group">
+                        <label>Temperatura de Secado (°C):</label>
+                        <input type="number" value="45" min="35" max="55">
+                    </div>
+                </div>
+                <button class="btn-primary" onclick="evaluarCalidad()">⭐ Evaluar Calidad</button>
+                
+                <div class="result-card" id="resultCalidad" style="display: none;">
+                    <h4>Evaluación de Calidad Esperada:</h4>
+                    <div class="metric">
+                        <span>Puntaje SCA:</span>
+                        <span class="metric-value">85.5 puntos</span>
+                    </div>
+                    <div class="metric">
+                        <span>Clasificación:</span>
+                        <span class="metric-value">Especialidad</span>
+                    </div>
+                    <div class="metric">
+                        <span>Perfil de Taza:</span>
+                        <span class="metric-value">Frutal, Dulce, Balanceado</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            // Ocultar todos los tabs
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.style.display = 'none');
+            
+            // Remover clase active de todos los botones
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Mostrar tab seleccionado
+            document.getElementById(tabName).style.display = 'block';
+            event.target.classList.add('active');
+        }
+
+        function calcularRendimiento() {
+            document.getElementById('resultRendimiento').style.display = 'block';
+            alert('Calculando predicción de rendimiento...');
+        }
+
+        function analizarPlagas() {
+            document.getElementById('resultPlagas').style.display = 'block';
+            alert('Analizando riesgo de plagas...');
+        }
+
+        function generarPronostico() {
+            document.getElementById('resultClima').style.display = 'block';
+            alert('Generando pronóstico climático...');
+        }
+
+        function evaluarCalidad() {
+            document.getElementById('resultCalidad').style.display = 'block';
+            alert('Evaluando calidad del café...');
+        }
+    </script>
+</body>
+</html>
